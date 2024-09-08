@@ -9,6 +9,7 @@ client = commands.Bot(command_prefix='_', intents=intents, help_command=None)
 
 @client.event
 async def on_ready():
+    await client.change_presence(activity=discord.Game(name="poggers"))
     print(f'We have logged in as {client.user}')
 
 @client.command()
