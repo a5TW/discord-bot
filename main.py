@@ -28,28 +28,49 @@ async def say(ctx, msg=None):
 @client.command()
 @commands.has_guild_permissions(kick_members=True)
 async def kick(ctx, member:discord.Member, reason):
-    if ctx.author.id == 773204048751886377 or ctx.author.id == 701621878631956572:
-        await ctx.guild.kick(member)
-        if reason == None:
-            em = discord.Embed(title=f"User {member.mention} Kicked")
-            await ctx.send(embed=em)
-        else:
-            em = discord.Embed(title=f"User {member.mention} Kicked", description=f"Reason: {reason}")
-            await ctx.send(embed=em)
+    await ctx.guild.kick(member)
+    if reason == None:
+        em = discord.Embed(title=f"User {member.mention} Kicked")
+        await ctx.send(embed=em)
+    else:
+        em = discord.Embed(title=f"User {member.mention} Kicked", description=f"Reason: {reason}")
+        await ctx.send(embed=em)
 #kick command end
 
 #ban command start
 @client.command()
 @commands.has_guild_permissions(ban_members=True)
 async def ban(ctx, member:discord.Member, reason):
-    if ctx.author.id == 773204048751886377 or ctx.author.id == 701621878631956572:
-        await ctx.guild.ban(member)
-        if reason == None:
-            em = discord.Embed(title=f"User {member.mention} Banned")
-            await ctx.send(embed=em)
-        else:
-            em = discord.Embed(title=f"User {member.mention} Banned", description=f"Reason: {reason}")
-            await ctx.send(embed=em)
+    await ctx.guild.ban(member)
+    if reason == None:
+        em = discord.Embed(title=f"User {member.mention} Banned")
+        await ctx.send(embed=em)
+    else:
+        em = discord.Embed(title=f"User {member.mention} Banned", description=f"Reason: {reason}")
+        await ctx.send(embed=em)
 #ban command end
+
+#kik command start
+@client.command()
+async def kik(ctx, member:discord.Member, reason):
+    if reason == None:
+        em = discord.Embed(title=f"User {member.mention} Kicked")
+        await ctx.send(embed=em)
+    else:
+        em = discord.Embed(title=f"User {member.mention} Kicked", description=f"Reason: {reason}")
+        await ctx.send(embed=em)
+#kik command end
+
+#bam command start
+@client.command()
+async def bam(ctx, member:discord.Member, reason):
+    if reason == None:
+        em = discord.Embed(title=f"User {member.mention} Banned")
+        await ctx.send(embed=em)
+    else:
+        em = discord.Embed(title=f"User {member.mention} Banned", description=f"Reason: {reason}")
+        await ctx.send(embed=em)
+#bam command end
+
 
 client.run(os.environ['DISCORD_TOKEN'])
