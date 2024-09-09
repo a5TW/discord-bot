@@ -4,10 +4,11 @@ a discord bot (working name)
 
 ## TODO:
 
-- [ ] make a name
+- [ ] make a name (see https://github.com/legendaryfishwastaken/discord-bot/issues/1)
 
 - [ ] add economy features (leaderboard, levels, bank, etc)
 
-- [ ] add fake moderation commands (bam, kik, warm) which pretend to use moderation powers on people
+- [x] add fake moderation commands (bam, kik, warm) which pretend to use moderation powers on people
 
 - [ ] add tmdb search command (for finding movies and tv shows) that will have a link to movies.lfdev.site
+- [ ] add some unique features (see https://github.com/legendaryfishwastaken/discord-bot/issues/3)
