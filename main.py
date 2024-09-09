@@ -10,7 +10,7 @@ client = commands.Bot(command_prefix='_', intents=intents, help_command=None)
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Streaming(url="https://movies.lfdev.site", name="movies.lfdev.site"))
-    print(f'We have logged in as {client.user}')
+    print(f'We have infiltrated the headquarters as {client.user}')
 
 @client.command()
 async def ping(ctx):
