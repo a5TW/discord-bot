@@ -18,11 +18,27 @@ async def ping(ctx):
     await ctx.send("Pong!")
 
 
-# SOMEONE DO THIS LATER
+#help command start
 @client.command()
 async def help(ctx):
     
-    await ctx.send('i can\'t help sry')
+    em = discord.Embed(title=f"# Help Panel",description=f'''## Commands:
+    ?help - shows all commands
+    ?kik - Fake kick
+    ?bam - Fake ban
+    -------------------------
+    ***BETA COMMANDS:***
+    ?say - this says something
+    -------------------------
+    **DEV COMMANDS**
+    ?kick - This is for kicking users
+    ?ban - This is for banning users
+    -------------------------
+
+
+    made by **alpha4TW** and **legendaryfishwastaken(legendary.fish)**''')
+    await ctx.send(embed=em)
+#help command end
 
 @client.command()
 async def say(ctx, msg=None):
