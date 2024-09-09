@@ -9,7 +9,7 @@ client = commands.Bot(command_prefix='_', intents=intents, help_command=None)
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Streaming(url="https://movies.lfdev.site", name="_help"))
+    await client.change_presence(activity=discord.Playing(name="_help"))
     print(f'We have infiltrated the headquarters as {client.user}')
 
 @client.command()
