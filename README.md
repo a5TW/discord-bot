@@ -1,5 +1,5 @@
 # discord-bot
-a discord bot
+a discord bot (working name)
 
 
 ## TODO:
