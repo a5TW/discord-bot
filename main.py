@@ -9,13 +9,20 @@ client = commands.Bot(command_prefix='_', intents=intents, help_command=None)
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Streaming(url="https://movies.lfdev.site", name="movies.lfdev.site"))
+    await client.change_presence(activity=discord.Streaming(url="https://movies.lfdev.site", name="_help"))
     print(f'We have infiltrated the headquarters as {client.user}')
 
 @client.command()
 async def ping(ctx):
     
     await ctx.send("Pong!")
+
+
+# SOMEONE DO THIS LATER
+@client.command()
+async def help(ctx):
+    
+    await ctx.send('i can\'t help sry')
 
 @client.command()
 async def say(ctx, msg=None):
