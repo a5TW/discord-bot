@@ -40,12 +40,14 @@ async def help(ctx):
     await ctx.send(embed=em)
 #help command end
 
+#say command start
 @client.command()
 async def say(ctx, msg=None):
     if ctx.author.id == 773204048751886377 or ctx.author.id == 701621878631956572:
         await ctx.send(msg)
     else:
         await ctx.send('<:chuckle:1282380972087574609>')
+#say command end
 
 #kick command start
 @client.command()
