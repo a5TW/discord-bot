@@ -52,7 +52,7 @@ async def say(ctx, msg=None):
 #kick command start
 @client.command()
 @commands.has_guild_permissions(kick_members=True)
-async def kick(ctx, member:discord.Member, reason):
+async def kick(ctx, member:discord.Member, reason=None):
     await ctx.guild.kick(member)
     if reason == None:
         em = discord.Embed(title=f"User {member.mention} Kicked")
@@ -65,7 +65,7 @@ async def kick(ctx, member:discord.Member, reason):
 #ban command start
 @client.command()
 @commands.has_guild_permissions(ban_members=True)
-async def ban(ctx, member:discord.Member, reason):
+async def ban(ctx, member:discord.Member, reason=None):
     await ctx.guild.ban(member)
     if reason == None:
         em = discord.Embed(title=f"User {member.mention} Banned")
@@ -77,7 +77,7 @@ async def ban(ctx, member:discord.Member, reason):
 
 #kik command start
 @client.command()
-async def kik(ctx, member:discord.Member, reason):
+async def kik(ctx, member:discord.Member, reason=None):
     if reason == None:
         em = discord.Embed(title=f"User {member.mention} Kicked")
         await ctx.send(embed=em)
@@ -88,7 +88,7 @@ async def kik(ctx, member:discord.Member, reason):
 
 #bam command start
 @client.command()
-async def bam(ctx, member:discord.Member, reason):
+async def bam(ctx, member:discord.Member, reason=None):
     if reason == None:
         em = discord.Embed(title=f"User {member.mention} Banned")
         await ctx.send(embed=em)
