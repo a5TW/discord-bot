@@ -18,12 +18,18 @@ async def ping(ctx):
     
     await ctx.send("Pong!")
 
+#random_number start
+@client.command()
+async def randint(ctx, num1, num2)
+    em = discord.Embed(title=f"# Random number from " + num1 + " to " + num2,description=f'''Your random number is...
+    ''' + randint(num1, num2))
+#random_number end
 
 #help command start
 @client.command()
 async def help(ctx):
     
-    em = discord.Embed(title=f"# Help Panel",description=f'''## Commands:
+    em = discord.Embed(title=f"# Help Panel", description=f'''## Commands:
     ?help - shows all commands
     ?kik - Fake kick
     ?bam - Fake ban
